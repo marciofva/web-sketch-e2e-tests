@@ -1,0 +1,6 @@
+{
+  "baseUrl": "https://www.sketch.com/",
+  "env": {
+    "environment": "production"
+  }
+}

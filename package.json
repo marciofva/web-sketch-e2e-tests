@@ -1,0 +1,21 @@
+{
+  "name": "web-sketch-e2e-tests",
+  "version": "1.0.0",
+  "description": "sketch tests",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "$(npm bin)/cypress open",
+    "cy:verify": "$(npm bin)/cypress verify",
+    "cy:chrome": "$(npm bin)/cypress run --env configFile=production --browser chrome --config video=false",
+    "cy:firefox": "$(npm bin)/cypress run --env configFile=production --browser firefox --config video=false",
+    "cy:env:credentials": "$(npm bin)/cypress run --env email=XXXXXXXXXX,password=XXXXXXXXXX --browser chrome configFile=production"
+  },
+  "author": "Marcio Almeida",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^9.6.0"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^6.3.1"
+  }
+}

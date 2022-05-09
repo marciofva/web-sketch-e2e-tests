@@ -1,0 +1,24 @@
+version: '3'
+services:
+
+  chrome:
+    image: cypress-docker-image-e2e-tests
+    environment:
+        CYPRESS_email: "marcio.fva87@gmail.com"
+        CYPRESS_password: "30302vj5"
+    command: "cy:chrome"
+    volumes:
+      - ./cypress:/cypress
+      - ./cypress.json:/cypress.json
+      - ./package.json:/package.json
+
+  firefox:
+    image: cypress-docker-image-e2e-tests
+    environment:
+        CYPRESS_email: "marcio.fva87@gmail.com"
+        CYPRESS_password: "30302vj5"
+    command: "cy:firefox"
+    volumes:
+      - ./cypress:/cypress
+      - ./cypress.json:/cypress.json
+      - ./package.json:/package.json
